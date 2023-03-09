@@ -8,4 +8,16 @@ function App() {
   );
 }
 
+/**
+ * Head
+ * Body
+ *  SideBar
+ *    MenuItems
+ *  MainContainer
+ *    ButtonsList
+ *    VideoContainer
+ *      VideoCard
+ * 
+ */
+
 export default App;
