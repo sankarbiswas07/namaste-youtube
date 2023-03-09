@@ -1,9 +1,11 @@
 import "./App.css"
 
+import Head from "./components/Head";
+
 function App() {
   return (
     <div className="App">
-      <h1 className="text-gray-200"> Namaste youtube</h1>
+      <Head />
     </div>
   );
 }
