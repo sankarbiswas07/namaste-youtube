@@ -1,8 +1,17 @@
+import Button from "./Button";
+
 const ButtonsList = () => {
+  const buttons = [{ name: "All" }, { name: "Gaming" }, { name: "Songs" }, { name: "Live" }, { name: "Soccer" }, { name: "Cricket" }, { name: "Cooking" }, { name: "Cricket" }, { name: "Valentines" }]
   return (
-    <h1>
-      ButtonsList
-    </h1>
+    <div className="flex">
+      {
+        buttons.map((button, i) => {
+          return (
+            <Button {...button} key={i} />
+          )
+        })
+      }
+    </div>
   );
 }
 

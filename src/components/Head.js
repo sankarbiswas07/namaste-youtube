@@ -1,11 +1,26 @@
+import { useSelector, useDispatch } from "react-redux";
+import { toggleMenu } from "../utils/store/appSlice";
+
 const Head = () => {
+  const isMenuOpen = useSelector(store => store.app.isMenuOpen)
+
+  const dispatch = useDispatch()
+
+  console.log("isMenuOpen => ", isMenuOpen)
+
+  const sideBarToggleHandler = () => {
+    dispatch(toggleMenu())
+  }
+
   return (
     <div >
       <div className="flex h-[60px] bg-blue-50 px-[20px] justify-between">
         {/* hamburger + brand */}
         <div className="flex items-center mr-4">
-          <img className="w-5 h-6 mr-4" alt="menu" src="menu.png" />
-          <div class="flex items-center">
+          <div onClick={() => sideBarToggleHandler()} className="hover:bg-slate-200 rounded-2xl h-9 w-9 flex pl-[6px] items-center cursor-pointer">
+            <img className="w-6 h-6 mr-4 " alt="menu" src="menu.png" />
+          </div>
+          <div className="flex items-center">
             <img className="h-10 mr-1" alt="youtube-logo" src="youtube.png" />
             <h2 className="font-bold">Premium</h2>
           </div>
