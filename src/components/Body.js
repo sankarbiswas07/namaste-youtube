@@ -1,8 +1,12 @@
+import SideBar from './SideBar';
+import MainContainer from './MainContainer';
+
 const Body = () => {
   return (
-    <h1>
-      Body
-    </h1>
+    <div className='flex'>
+      <SideBar />
+      <MainContainer />
+    </div>
   );
 }
 

@@ -1,8 +1,9 @@
+import VideoCard from './VideoCard';
 const VideoContainer = () => {
   return (
-    <h1>
-      VideoContainer
-    </h1>
+    <div>
+      <VideoCard />
+    </div>
   );
 }
 
